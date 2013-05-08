@@ -89,6 +89,8 @@ static void Coolio_Loop_free(struct Coolio_Loop *loop)
 static VALUE Coolio_Loop_initialize(VALUE self)
 {
   Coolio_Loop_ev_loop_new(self, INT2NUM(0));
+
+  return self;
 }
 
 /* Wrapper for populating a Coolio_Loop struct with a new event loop */
